@@ -6,21 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tareas</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <main>
         <div class="container">
-            <h1 class="title">Tareas por hacer</h1>
+            <h1 class="title">Tareas</h1>
             <div>
                 <form>
                     <input type="text" placeholder="Agregar nueva tarea..." class="search">
                     <button class="add">+</button>
                 </form>
             </div>
+            <div class="tasks__titles">
+                <h3 class="title1">Tareas por hacer</h3>
+                <h3 class="title2">Tareas completadas</h3>
+            </div>
             <div class="tasks">
                 <ul>
                     
                 </ul>
+            </div>
+            <div class="completed__tasks">
+                <ul>
+                    
+                </ul>
+            </div>
+
+            <div class="remove__all">
+                <p>Remover tareas</p>
             </div>
             <div class="empty">
                 <p>No tienes tareas pendientes</p>
@@ -29,6 +43,7 @@
 
 
     </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="script/script.js"></script>
 </body>
 </html>

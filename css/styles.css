@@ -53,13 +53,32 @@ main {
   font-size: 1.4rem;
   outline: none;
 }
-.container .tasks ul {
+.container .tasks__titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 2%;
+}
+.container .tasks__titles h3 {
+  font-weight: 600;
+  color: rgb(20, 18, 18);
+  font-size: medium;
+  cursor: pointer;
+  margin: 0 1em;
+  padding: 1% 0;
+}
+.container .tasks__titles :hover {
+  background-color: rgba(74, 74, 74, 0.253);
+  border-radius: 15%;
+}
+.container .tasks ul, .container .completed__tasks ul {
   margin-top: 2%;
   display: flex;
   flex-direction: column;
   padding: 0;
 }
-.container .tasks li {
+.container .tasks li, .container .completed__tasks li {
   display: flex;
   border: 1px rgb(20, 18, 18) solid;
   margin-top: 15px;
@@ -69,14 +88,14 @@ main {
   list-style: none;
   border-radius: 10px;
 }
-.container .tasks li p {
+.container .tasks li p, .container .completed__tasks li p {
   margin: 0;
   padding: 15px;
   width: 100%;
   color: #f2f3f4;
   font-weight: 600;
 }
-.container .tasks li button {
+.container .tasks li button, .container .completed__tasks li button {
   cursor: pointer;
   margin-left: auto;
   border: none;
@@ -89,9 +108,24 @@ main {
   width: 10%;
   font-size: 1.2em;
 }
-.container .tasks li button:hover, .container .tasks li button :active {
+.container .tasks li button:hover, .container .completed__tasks li button:hover, .container .tasks li button :active, .container .completed__tasks li button :active {
   transform: translate(0px, 2px);
   background-color: rgba(33, 160, 154, 0.884);
+}
+.container .completed__tasks p {
+  text-decoration: 2px rgba(12, 242, 12, 0.5) line-through;
+}
+.container .remove__all {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(33, 160, 154, 0.884);
+  padding: 1em;
+  margin: 2% 30%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.container .remove__all p {
+  font-weight: 600;
 }
 .container .empty {
   color: rgb(43, 73, 73);
@@ -121,7 +155,7 @@ main {
     margin-top: 5%;
     margin-bottom: 10%;
   }
-  .container .tasks li button {
+  .container .tasks li button, .container .completed__tasks li button {
     padding: 3px 5px;
   }
   .container .error {
@@ -143,7 +177,7 @@ main {
     margin-top: 5%;
     margin-bottom: 10%;
   }
-  .container .tasks li button {
+  .container .tasks li button, .container .completed__tasks li button {
     padding: 3px 5px;
   }
   .container .error {
@@ -169,7 +203,7 @@ main {
     margin-top: 5%;
     margin-bottom: 10%;
   }
-  .container .tasks li button {
+  .container .tasks li button, .container .completed__tasks li button {
     padding: 3px 5px;
   }
   .container .error {
@@ -195,7 +229,7 @@ main {
     margin-top: 5%;
     margin-bottom: 7%;
   }
-  .container .tasks li button {
+  .container .tasks li button, .container .completed__tasks li button {
     padding: 3px 5px;
   }
   .container .error {
